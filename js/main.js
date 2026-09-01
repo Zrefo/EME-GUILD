@@ -1,7 +1,3 @@
-/* ============================================================
-   EME GUILD — main.js
-   Navigation, scroll reveal, background particles, mobile menu
-   ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavScroll();
@@ -12,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initRules();
 });
 
-/* ---------- Nav background on scroll ---------- */
 function initNavScroll() {
   const nav = document.querySelector('.nav');
   if (!nav) return;
@@ -23,7 +18,6 @@ function initNavScroll() {
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-/* ---------- Mobile hamburger menu ---------- */
 function initMobileNav() {
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('.nav-links');
@@ -44,7 +38,6 @@ function initMobileNav() {
   });
 }
 
-/* ---------- Highlight active section in nav ---------- */
 function initActiveSection() {
   const sections = document.querySelectorAll('main [id]');
   const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
@@ -70,7 +63,6 @@ function initActiveSection() {
   sections.forEach((s) => observer.observe(s));
 }
 
-/* ---------- Scroll reveal ---------- */
 function initScrollReveal() {
   const items = document.querySelectorAll('.reveal');
   if (!items.length) return;
@@ -95,7 +87,6 @@ function initScrollReveal() {
   items.forEach((el) => observer.observe(el));
 }
 
-/* ---------- Lightweight background particles ---------- */
 function initParticles() {
   const canvas = document.getElementById('particle-canvas');
   if (!canvas) return;
@@ -153,7 +144,6 @@ function initParticles() {
   requestAnimationFrame(tick);
 }
 
-/* ---------- Expandable rule panels ---------- */
 function initRules() {
   const triggers = document.querySelectorAll('.rule-trigger');
   triggers.forEach((btn) => {
