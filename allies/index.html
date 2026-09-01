@@ -2,276 +2,271 @@
 
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+```
 <title>Guild Allies — EME Guild</title>
 
 <link rel="icon" type="image/png" href="../assets/images/eme-logo.png">
 
-<meta name="description" content="Guilds currently allied with EME Guild on HylexMC." />
+<meta
+    name="description"
+    content="Guilds currently allied with EME Guild on HylexMC."
+>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
-  href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap"
-  rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
 >
 
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/animations.css">
 <link rel="stylesheet" href="../css/responsive.css">
+```
+
 </head>
 
 <body>
 
+```
 <div class="bg-gradient"></div>
 <div class="bg-grid"></div>
 
-<canvas id="particle-canvas" aria-hidden="true"></canvas>
+<canvas
+    id="particle-canvas"
+    aria-hidden="true"
+></canvas>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+
 
 <nav class="nav" id="site-nav">
 
-  <div class="wrap">
+    <div class="wrap">
 
-```
-<a href="../index.html#home" class="brand">
-  <span class="brand-mark"></span>
-  EME GUILD
-</a>
-
-<ul class="nav-links" id="nav-links">
-
-  <li>
-    <a href="../index.html#home">
-      Home
-    </a>
-  </li>
-
-  <li>
-    <a href="../index.html#about">
-      About
-    </a>
-  </li>
-
-  <li>
-    <a href="../members/">
-      Members
-    </a>
-  </li>
-
-  <li>
-    <a href="../allies/" class="active">
-      Allies
-    </a>
-  </li>
-
-  <li>
-    <a href="../rules/">
-      Rules
-    </a>
-  </li>
-
-  <li>
-    <a
-      href="https://discord.gg/AXxr3UpthV"
-      target="_blank"
-      rel="noopener"
-      class="nav-cta"
-    >
-      Discord
-    </a>
-  </li>
-
-</ul>
+        <a href="../index.html#home" class="brand">
+            <span class="brand-mark"></span>
+            EME GUILD
+        </a>
 
 
-<button
-  class="nav-toggle"
-  id="nav-toggle"
-  aria-label="Toggle navigation"
-  aria-expanded="false"
->
-  <span></span>
-</button>
-```
+        <ul class="nav-links" id="nav-links">
 
-  </div>
+            <li>
+                <a href="../index.html#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="../index.html#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="../members/">
+                    Members
+                </a>
+            </li>
+
+            <li>
+                <a href="../allies/" class="active">
+                    Allies
+                </a>
+            </li>
+
+            <li>
+                <a href="../rules/">
+                    Rules
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://discord.gg/AXxr3UpthV"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="nav-cta"
+                >
+                    Discord
+                </a>
+            </li>
+
+        </ul>
+
+
+        <button
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+        >
+            <span></span>
+        </button>
+
+    </div>
 
 </nav>
 
-<!-- =========================
-     MAIN CONTENT
-========================= -->
+
 
 <main>
 
-  <!-- HERO -->
 
-  <section class="page-hero">
+    <section class="page-hero">
 
-```
-<div class="wrap">
-
-  <a
-    href="../index.html#home"
-    class="back-link reveal"
-  >
-    <span class="arrow"></span>
-    Back to home
-  </a>
+        <div class="wrap">
 
 
-  <span class="section-tag reveal">
-    // DIPLOMACY
-  </span>
+            <a
+                href="../index.html#home"
+                class="back-link reveal"
+            >
+                <span class="arrow"></span>
+                Back to home
+            </a>
 
 
-  <h1 class="reveal">
-    Guild Allies
-  </h1>
+
+            <span class="section-tag reveal">
+                // DIPLOMACY
+            </span>
 
 
-  <p class="reveal">
-    Guilds standing alongside EME Guild on HylexMC.
-  </p>
+
+            <h1 class="reveal">
+                Guild Allies
+            </h1>
 
 
-  <!-- ALLY COUNT -->
 
-  <div class="count-banner reveal">
+            <p class="reveal">
+                Guilds standing alongside EME Guild on HylexMC.
+            </p>
 
-    <span
-      class="count-num"
-      data-stat="allyCount"
+
+
+            <div class="count-banner reveal">
+
+                <span
+                    class="count-num"
+                    data-stat="allyCount"
+                >
+                    —
+                </span>
+
+                <span class="count-label">
+                    Allies
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section
+        class="section"
+        style="padding-top: 20px;"
     >
-      —
-    </span>
 
-    <span class="count-label">
-      Allies
-    </span>
+        <div class="wrap">
 
-  </div>
+            <div
+                class="ally-list"
+                id="allies-list"
+            >
 
-</div>
-```
+                <div class="grid-msg">
+                    Loading allies…
+                </div>
 
-  </section>
+            </div>
 
-  <!-- ALLIES LIST -->
+        </div>
 
-  <section
-    class="section"
-    style="padding-top: 20px;"
-  >
-
-```
-<div class="wrap">
-
-  <div
-    class="ally-list"
-    id="allies-list"
-  >
-
-    <div class="grid-msg">
-      Loading allies…
-    </div>
-
-  </div>
-
-</div>
-```
-
-  </section>
+    </section>
 
 </main>
 
-<!-- =========================
-     FOOTER
-========================= -->
+
 
 <footer class="footer">
 
-  <div class="wrap">
-
-```
-<div class="footer-brand">
-
-  <span class="brand-mark"></span>
-
-  EME GUILD
-
-</div>
+    <div class="wrap">
 
 
-<ul class="footer-links">
+        <div class="footer-brand">
+            <span class="brand-mark"></span>
+            EME GUILD
+        </div>
 
-  <li>
-    <a href="../index.html#about">
-      About
-    </a>
-  </li>
 
-  <li>
-    <a href="../members/">
-      Members
-    </a>
-  </li>
 
-  <li>
-    <a href="../allies/">
-      Allies
-    </a>
-  </li>
+        <ul class="footer-links">
 
-  <li>
-    <a href="../rules/">
-      Rules
-    </a>
-  </li>
+            <li>
+                <a href="../index.html#about">
+                    About
+                </a>
+            </li>
 
-  <li>
-    <a
-      href="https://discord.gg/AXxr3UpthV"
-      target="_blank"
-      rel="noopener"
-    >
-      Discord
-    </a>
-  </li>
+            <li>
+                <a href="../members/">
+                    Members
+                </a>
+            </li>
 
-</ul>
-```
+            <li>
+                <a href="../allies/">
+                    Allies
+                </a>
+            </li>
 
-  </div>
+            <li>
+                <a href="../rules/">
+                    Rules
+                </a>
+            </li>
 
-  <div class="wrap">
+            <li>
+                <a
+                    href="https://discord.gg/AXxr3UpthV"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Discord
+                </a>
+            </li>
 
-```
-<p class="footer-note">
-  EME Guild is an independent player community on HylexMC and is not affiliated with Mojang.
-</p>
-```
+        </ul>
 
-  </div>
+    </div>
+
+
+
+    <div class="wrap">
+
+        <p class="footer-note">
+            EME Guild is an independent player community on HylexMC and is not affiliated with Mojang.
+        </p>
+
+    </div>
 
 </footer>
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+
 
 <script src="../js/main.js"></script>
-
 <script src="../js/stats.js"></script>
-
 <script src="../js/allies.js"></script>
+```
 
 </body>
 </html>
