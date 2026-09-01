@@ -1,9 +1,3 @@
-/* ============================================================
-   EME GUILD — stats.js
-   Loads data/guild-stats.json and fills every element carrying
-   a data-stat attribute. The Discord bot regenerates this file
-   from the live Discord role count; this file only reads it.
-   ============================================================ */
 
 document.addEventListener('DOMContentLoaded', loadStats);
 
