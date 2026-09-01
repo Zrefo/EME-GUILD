@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Guild Members — EME Guild</title>
+<meta name="description" content="Every player currently part of EME Guild on HylexMC." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<div class="bg-gradient"></div>
+<div class="bg-grid"></div>
+<canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+<nav class="nav" id="site-nav">
+  <div class="wrap">
+    <a href="index.html#home" class="brand">
+      <span class="brand-mark"></span>
+      EME GUILD
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="members.html" class="active">Members</a></li>
+      <li><a href="allies.html">Allies</a></li>
+      <li><a href="rules.html">Rules</a></li>
+      <li><a href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener" class="nav-cta">Discord</a></li>
+    </ul>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <a href="index.html#home" class="back-link reveal"><span class="arrow"></span>Back to home</a>
+      <span class="section-tag reveal">// ROSTER</span>
+      <h1 class="reveal">Guild Members</h1>
+      <p class="reveal">Every player currently part of EME Guild on HylexMC.</p>
+
+      <div class="count-banner reveal">
+        <span class="count-num" data-stat="memberCount">—</span>
+        <span class="count-label">Members</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 20px;">
+    <div class="wrap">
+      <div class="player-grid reveal-group" id="members-grid">
+        <div class="grid-msg">Loading members…</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <span class="brand-mark"></span>
+      EME GUILD
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="members.html">Members</a></li>
+      <li><a href="allies.html">Allies</a></li>
+      <li><a href="rules.html">Rules</a></li>
+      <li><a href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener">Discord</a></li>
+    </ul>
+  </div>
+  <div class="wrap">
+    <p class="footer-note">EME Guild is an independent player community on HylexMC and is not affiliated with Mojang.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/stats.js"></script>
+<script src="js/members.js"></script>
+</body>
+</html>
