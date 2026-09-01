@@ -10,7 +10,7 @@ async function loadMembers() {
 
   let res;
   try {
-    res = await fetch('../data/members.json', { cache: 'no-store' });
+    res = await fetch('/data/members.json', { cache: 'no-store' });
   } catch (networkErr) {
     console.error('[EME] Network error fetching members.json:', networkErr);
     list.innerHTML = `<div class="grid-msg">Could not reach data/members.json (network error). Are you opening this file directly instead of through a server? Details: ${escapeHtml(String(networkErr))}</div>`;
