@@ -1,8 +1,3 @@
-/* ============================================================
-   EME GUILD — allies.js
-   Loads data/allies.json and renders ally cards.
-   The Discord bot updates allies.json; this file only reads it.
-   ============================================================ */
 
 document.addEventListener('DOMContentLoaded', loadAllies);
 
@@ -27,11 +22,6 @@ async function loadAllies() {
   }
 }
 
-/**
- * Accepts either a plain string ("GuildName") or an object
- * ({ name: "GuildName", logo: "https://..." }) so the bot can
- * add logos later without breaking the frontend.
- */
 function renderAllyCard(entry) {
   const name = typeof entry === 'string' ? entry : entry.name || 'Unknown Guild';
   const logo = typeof entry === 'object' && entry.logo ? entry.logo : '';
