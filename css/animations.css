@@ -1,7 +1,3 @@
-/* ============================================================
-   EME GUILD — animations.css
-   Keyframes + scroll-reveal utility
-   ============================================================ */
 
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; transform: scale(1); }
@@ -26,7 +22,6 @@
   100% { transform: translateY(-120vh) translateX(var(--drift, 20px)); opacity: 0; }
 }
 
-/* Scroll reveal */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -54,7 +49,6 @@
   }
 }
 
-/* Hero entrance sequence (single orchestrated load) */
 .hero-eyebrow, .hero h1, .hero-subtitle, .hero-desc, .hero-actions, .hero-stats {
   opacity: 0;
   transform: translateY(16px);
