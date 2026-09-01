@@ -1,8 +1,3 @@
-/* ============================================================
-   EME GUILD — members.js
-   Loads data/members.json and renders player cards.
-   The Discord bot updates members.json; this file only reads it.
-   ============================================================ */
 
 document.addEventListener('DOMContentLoaded', loadMembers);
 
@@ -30,7 +25,6 @@ async function loadMembers() {
 function renderMemberCard(username) {
   const safeName = escapeHtml(username);
   const avatarUrl = `https://mc-heads.net/avatar/${encodeURIComponent(username)}/64`;
-  // Adjust this URL to match HylexMC's real public profile route.
   const profileUrl = `https://hylexmc.net/player/${encodeURIComponent(username)}`;
 
   return `
