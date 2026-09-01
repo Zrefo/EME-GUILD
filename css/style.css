@@ -1,10 +1,5 @@
-/* ============================================================
-   EME GUILD — style.css
-   Design tokens + base layout + components
-   ============================================================ */
 
 :root {
-  /* Color tokens */
   --bg-void: #07090a;
   --bg-panel: #0e1310;
   --bg-panel-raised: #121a15;
@@ -24,11 +19,9 @@
   --line: rgba(61, 220, 132, 0.16);
   --line-strong: rgba(61, 220, 132, 0.4);
 
-  /* Type */
   --font-display: 'Press Start 2P', monospace;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  /* Layout */
   --max-w: 1180px;
   --radius: 3px;
   --nav-h: 72px;
@@ -81,7 +74,6 @@ p { margin: 0; color: var(--ink-300); }
   padding: 0 24px;
 }
 
-/* ---------- Background layers ---------- */
 .bg-layer {
   position: fixed;
   inset: 0;
@@ -119,7 +111,6 @@ p { margin: 0; color: var(--ink-300); }
   pointer-events: none;
 }
 
-/* ---------- Navigation ---------- */
 .nav {
   position: fixed;
   top: 0;
@@ -249,7 +240,6 @@ p { margin: 0; color: var(--ink-300); }
 .nav-toggle.open span::before { transform: translateY(7px) rotate(45deg); }
 .nav-toggle.open span::after { transform: translateY(-7px) rotate(-45deg); }
 
-/* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -285,7 +275,6 @@ p { margin: 0; color: var(--ink-300); }
   box-shadow: 0 0 20px var(--green-glow);
 }
 
-/* ---------- Hero ---------- */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -392,7 +381,6 @@ p { margin: 0; color: var(--ink-300); }
   animation: scroll-cue-move 1.8s ease infinite;
 }
 
-/* ---------- Section shell ---------- */
 .section {
   padding: 120px 0;
   position: relative;
@@ -421,7 +409,6 @@ p { margin: 0; color: var(--ink-300); }
   color: var(--ink-500);
 }
 
-/* XP-bar style divider */
 .xp-divider {
   height: 6px;
   width: 100%;
@@ -441,7 +428,6 @@ p { margin: 0; color: var(--ink-300); }
   box-shadow: 0 0 16px var(--green-glow);
 }
 
-/* ---------- Cards (generic) ---------- */
 .card {
   background: var(--bg-panel-soft);
   border: 1px solid var(--line);
@@ -470,7 +456,6 @@ p { margin: 0; color: var(--ink-300); }
 }
 .card:hover::before { opacity: 0.8; }
 
-/* ---------- About ---------- */
 .about-grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
@@ -498,7 +483,6 @@ p { margin: 0; color: var(--ink-300); }
 }
 .about-goal p { font-size: 15px; color: var(--ink-300); }
 
-/* ---------- Info cards grid ---------- */
 .info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -561,7 +545,6 @@ p { margin: 0; color: var(--ink-300); }
 .discord-card h3 { font-size: 17px; margin-bottom: 6px; }
 .discord-card p { font-size: 14.5px; color: var(--ink-500); max-width: 380px; }
 
-/* ---------- Owner section ---------- */
 .owner-panel {
   display: flex;
   align-items: center;
@@ -615,7 +598,6 @@ p { margin: 0; color: var(--ink-300); }
 
 .owner-info p { color: var(--ink-500); max-width: 420px; font-size: 15px; }
 
-/* ---------- Members / Allies grids ---------- */
 .count-banner {
   display: flex;
   align-items: baseline;
@@ -701,7 +683,6 @@ p { margin: 0; color: var(--ink-300); }
   padding: 30px 0;
 }
 
-/* Ally cards */
 .ally-card {
   display: flex;
   flex-direction: column;
@@ -736,7 +717,6 @@ p { margin: 0; color: var(--ink-300); }
 .ally-name { font-size: 15px; font-weight: 700; }
 .ally-sub { font-size: 12.5px; color: var(--ink-700); }
 
-/* ---------- Rules ---------- */
 .rule-item {
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -816,7 +796,6 @@ p { margin: 0; color: var(--ink-300); }
 }
 .rules-footer p { font-size: 14px; color: var(--ink-500); }
 
-/* ---------- Footer ---------- */
 .footer {
   border-top: 1px solid var(--line);
   padding: 48px 0 32px;
