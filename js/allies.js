@@ -10,7 +10,7 @@ async function loadAllies() {
 
   let res;
   try {
-    res = await fetch('data/allies.json', { cache: 'no-store' });
+    res = await fetch('..data/allies.json', { cache: 'no-store' });
   } catch (networkErr) {
     console.error('[EME] Network error fetching allies.json:', networkErr);
     list.innerHTML = `<div class="grid-msg">Could not reach data/allies.json (network error). Are you opening this file directly instead of through a server? Details: ${escapeHtml(String(networkErr))}</div>`;
