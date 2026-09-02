@@ -6,7 +6,7 @@ async function loadStats() {
   if (!targets.length) return;
 
   try {
-    const res = await fetch('data/guild-stats.json', { cache: 'no-store' });
+    const res = await fetch('..data/guild-stats.json', { cache: 'no-store' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const stats = await res.json();
 
