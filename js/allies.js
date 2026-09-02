@@ -13,13 +13,13 @@ async function loadAllies() {
     res = await fetch('../data/allies.json', { cache: 'no-store' });
   } catch (networkErr) {
     console.error('[EME] Network error fetching allies.json:', networkErr);
-    list.innerHTML = `<div class="grid-msg">Could not reach data/allies.json (network error). Are you opening this file directly instead of through a server? Details: ${escapeHtml(String(networkErr))}</div>`;
+    list.innerHTML = `<div class="grid-msg">Could not reach ../ata/allies.json (network error). Are you opening this file directly instead of through a server? Details: ${escapeHtml(String(networkErr))}</div>`;
     return;
   }
 
   if (!res.ok) {
     console.error('[EME] allies.json HTTP error:', res.status, res.statusText);
-    list.innerHTML = `<div class="grid-msg">data/allies.json returned HTTP ${res.status} (${escapeHtml(res.statusText)}). Check the file exists at that exact path.</div>`;
+    list.innerHTML = `<div class="grid-msg">../data/allies.json returned HTTP ${res.status} (${escapeHtml(res.statusText)}). Check the file exists at that exact path.</div>`;
     return;
   }
 
@@ -28,7 +28,7 @@ async function loadAllies() {
     allies = await res.json();
   } catch (parseErr) {
     console.error('[EME] allies.json is not valid JSON:', parseErr);
-    list.innerHTML = `<div class="grid-msg">data/allies.json is not valid JSON. Details: ${escapeHtml(String(parseErr))}</div>`;
+    list.innerHTML = `<div class="grid-msg">../data/allies.json is not valid JSON. Details: ${escapeHtml(String(parseErr))}</div>`;
     return;
   }
 
