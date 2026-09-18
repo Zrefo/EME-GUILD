@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EME Alliances — EME Guild | HylexMC</title>
+<meta name="description" content="Guilds allied with EME on HylexMC." />
+<meta name="theme-color" content="#060907" />
+
+<meta property="og:title" content="EME Alliances — EME Guild" />
+<meta property="og:description" content="Guilds allied with EME on HylexMC." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://eme-guild.xyz/alliances/" />
+<meta property="og:image" content="https://eme-guild.xyz/assets/images/eme-logo.png" />
+
+<link rel="icon" href="../assets/images/eme-logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="../assets/images/eme-logo.png" />
+
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<div id="loader" aria-hidden="true">
+  <div class="loader-mark">
+    <img src="../assets/images/eme-logo.png" alt="" />
+    <div class="loader-ring"></div>
+  </div>
+  <div class="loader-bar"><span></span></div>
+  <p class="loader-label">LOADING EME</p>
+</div>
+
+<div id="page-transition" aria-hidden="true"></div>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-vignette" aria-hidden="true"></div>
+<div class="bg-noise" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/">
+      <img src="../assets/images/eme-logo.png" alt="EME Guild logo" width="32" height="32" />
+      <span>EME</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/members/">Members</a>
+      <a href="/alliances/" class="is-active">Alliances</a>
+      <a href="/rules/">Rules</a>
+      <a href="https://discord.gg/AXxr3UpthV" class="nav-cta" target="_blank" rel="noopener noreferrer">Discord</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" aria-hidden="true">
+  <a href="/">Home</a>
+  <a href="/members/">Members</a>
+  <a href="/alliances/" class="is-active">Alliances</a>
+  <a href="/rules/">Rules</a>
+  <a href="https://discord.gg/AXxr3UpthV" class="nav-cta" target="_blank" rel="noopener noreferrer">Join Discord</a>
+</div>
+
+<main id="main-content">
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-top" data-reveal>
+        <div>
+          <p class="section-kicker">Allied Guilds</p>
+          <h1 class="page-title">EME ALLIANCES</h1>
+        </div>
+        <span class="page-count" id="alliances-count-badge">— ALLIANCES</span>
+      </div>
+      <div class="search-bar" data-reveal data-reveal-delay="80">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="alliance-search" placeholder="Search alliances..." aria-label="Search alliances" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:24px;">
+    <div class="container">
+      <div class="entity-grid" id="alliances-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../assets/images/eme-logo.png" alt="EME Guild logo" width="34" height="34" />
+        <div>
+          <strong>EME GUILD</strong>
+          <p>Building a powerful community on HylexMC.</p>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>NAVIGATION</h4>
+          <a href="/">Home</a>
+          <a href="/members/">Members</a>
+          <a href="/alliances/">Alliances</a>
+          <a href="/rules/">Rules</a>
+        </div>
+        <div class="footer-col">
+          <h4>COMMUNITY</h4>
+          <a href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener noreferrer">Discord</a>
+        </div>
+        <div class="footer-col">
+          <h4>SERVER</h4>
+          <span>HylexMC</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 EME Guild. All rights reserved. | EME Guild is an independent player community on HylexMC and is not affiliated with Mojang.</span>
+      <a href="/rules/">Rules</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/particles.js"></script>
+<script src="../js/animations.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/alliances.js"></script>
+</body>
+</html>
