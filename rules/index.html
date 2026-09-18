@@ -1,130 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="../">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Guild Rules — EME Guild</title>
-<link rel="icon" type="image/png" href="../assets/images/eme-logo.png">
-<meta name="description" content="The rules every EME Guild member is expected to follow." />
+<title>EME Rules — EME Guild | HylexMC</title>
+<meta name="description" content="Discord rules and EME guild rules for the EME community on HylexMC." />
+<meta name="theme-color" content="#060907" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta property="og:title" content="EME Rules — EME Guild" />
+<meta property="og:description" content="Discord rules and EME guild rules for the EME community on HylexMC." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://eme-guild.xyz/rules/" />
+<meta property="og:image" content="https://eme-guild.xyz/assets/images/eme-logo.png" />
+
+<link rel="icon" href="../assets/images/eme-logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="../assets/images/eme-logo.png" />
 
 <link rel="stylesheet" href="../css/style.css" />
-<link rel="stylesheet" href="../css/animations.css" />
+<link rel="stylesheet" href="../css/components.css" />
 <link rel="stylesheet" href="../css/responsive.css" />
 </head>
 <body>
 
-<div class="bg-gradient"></div>
-<div class="bg-grid"></div>
-<canvas id="particle-canvas" aria-hidden="true"></canvas>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-<nav class="nav" id="site-nav">
-  <div class="wrap">
-    <a href="index.html#home" class="brand">
-      <span class="brand-mark"></span>
-      EME GUILD
+<div id="loader" aria-hidden="true">
+  <div class="loader-mark">
+    <img src="../assets/images/eme-logo.png" alt="" />
+    <div class="loader-ring"></div>
+  </div>
+  <div class="loader-bar"><span></span></div>
+  <p class="loader-label">LOADING EME</p>
+</div>
+
+<div id="page-transition" aria-hidden="true"></div>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-vignette" aria-hidden="true"></div>
+<div class="bg-noise" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/">
+      <img src="../assets/images/eme-logo.png" alt="EME Guild logo" width="32" height="32" />
+      <span>EME</span>
     </a>
-
-    <ul class="nav-links" id="nav-links">
-      <li><a href="../">Home</a></li>
-      <li><a href="../#about">About</a></li>
-      <li><a href="../members">Members</a></li>
-      <li><a href="../allies">Allies</a></li>
-      <li><a href="../rules" class="active">Rules</a></li>
-      <li><a href="../faq">FAQ</a></li>
-      <li><a href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener" class="nav-cta">Discord</a></li>
-    </ul>
-
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/members/">Members</a>
+      <a href="/alliances/">Alliances</a>
+      <a href="/rules/" class="is-active">Rules</a>
+      <a href="https://discord.gg/AXxr3UpthV" class="nav-cta" target="_blank" rel="noopener noreferrer">Discord</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
   </div>
-</nav>
+</header>
 
-<main>
+<div class="mobile-menu" aria-hidden="true">
+  <a href="/">Home</a>
+  <a href="/members/">Members</a>
+  <a href="/alliances/">Alliances</a>
+  <a href="/rules/" class="is-active">Rules</a>
+  <a href="https://discord.gg/AXxr3UpthV" class="nav-cta" target="_blank" rel="noopener noreferrer">Join Discord</a>
+</div>
+
+<main id="main-content">
   <section class="page-hero">
-    <div class="wrap">
-      <a href="../" class="back-link reveal"><span class="arrow"></span>Back to home</a>
-      <span class="section-tag reveal">// CODE OF CONDUCT</span>
-      <h1 class="reveal">Guild Rules</h1>
-      <p class="reveal">The few rules every member is expected to follow.</p>
+    <div class="container">
+      <div data-reveal>
+        <p class="section-kicker">Read Before Joining</p>
+        <h1 class="page-title">EME RULES</h1>
+      </div>
     </div>
   </section>
 
-  <section class="section" style="padding-top: 20px;">
-    <div class="wrap">
-      <div class="rules-list reveal-group">
+  <section class="section" style="padding-top:16px;">
+    <div class="container">
+      <div class="rules-columns">
 
-        <div class="card rule-card reveal">
-          <span class="rt-index">01</span>
-          <div>
-            <h3>Guild Conduct</h3>
-            <p>Respect every guild member.<br>
-              Do not kill other guild members.<br>
-              Do not betray guild members.<br>
-              Do not intentionally cause problems within the guild.<br>
-              Represent EME positively.
-            </p>
+        <!-- Discord rules -->
+        <div class="rules-col" data-reveal>
+          <div class="rules-col-head">
+            <h2>DISCORD RULES</h2>
+            <p>Always follow the Discord Community Guidelines and the Minecraft EULA.</p>
+          </div>
+          <div class="rules-col-body">
+
+            <div class="rule-subsection" style="border-top:none; margin-top:14px; padding-top:0;">
+              <p>
+                Read the
+                <a href="https://discord.com/guidelines" target="_blank" rel="noopener noreferrer">Discord Community Guidelines</a>
+                and the
+                <a href="https://www.minecraft.net/eula" target="_blank" rel="noopener noreferrer">Minecraft EULA</a>
+                — both apply here at all times.
+              </p>
+            </div>
+
+            <div class="rule-subsection">
+              <h3>RESPECT HYLEXMC</h3>
+              <p>HylexMC is a Minecraft server where the EME guild is placed. This means that by being part of the EME guild community, you also belong to the HylexMC community.</p>
+              <p>This is not the place to insult or criticize the HylexMC server.</p>
+              <p>You are also required to follow HylexMC's rules while here — read them
+                <a href="https://hylexmc.net/rules" target="_blank" rel="noopener noreferrer">here</a>.
+              </p>
+            </div>
+
+            <div class="rule-subsection">
+              <h3>ADVERTISING</h3>
+              <p>We do not allow the promotion of any Discord or Minecraft servers other than
+                <a href="https://hylexmc.net/" target="_blank" rel="noopener noreferrer">mc.HylexMC.net</a>.
+              </p>
+              <p>Sharing the names or links of other servers via messages, images, videos, or any other method is prohibited.</p>
+            </div>
+
+            <div class="rule-subsection">
+              <h3>CHAT</h3>
+              <ul class="rule-list-plain">
+                <li>Do not mention or tag others without a valid reason.</li>
+                <li>No spamming or flooding the chat.</li>
+                <li>No swearing in public chats.</li>
+                <li>Be friendly, and treat others the way you want to be treated.</li>
+                <li>Racism, sexism and any other kind of discrimination are never tolerated.</li>
+              </ul>
+            </div>
+
+            <div class="rule-subsection">
+              <h3>NO POLITICS</h3>
+              <p>Political discussion of any kind is not allowed. This includes parties, elections, governments, wars, activism and any other politically charged topic, in text or in voice.</p>
+            </div>
+
+            <div class="rule-subsection">
+              <h3>NO NSFW</h3>
+              <p>No sexual, explicit, gore or otherwise disturbing content. This covers messages, images, links, usernames, nicknames, avatars and statuses.</p>
+            </div>
+
           </div>
         </div>
 
-        <div class="card rule-card reveal">
-          <span class="rt-index">02</span>
-          <div>
-            <h3>Teamwork</h3>
-            <p>Help other guild members when possible.<br>
-              Support guild members during conflicts.<br>
-              Share important information with the guild.<br>
-              Participate in guild activities.<br>
-              Do not leave a guild member behind when they need help.
-            </p>
+        <!-- EME Guild rules -->
+        <div class="rules-col" data-reveal data-reveal-delay="120">
+          <div class="rules-col-head">
+            <h2>EME GUILD RULES</h2>
+            <p>Followed by every member, without exception.</p>
+          </div>
+          <div class="rules-col-body">
+            <div class="rule-item">
+              <span class="rule-index">01</span>
+              <p>Respect every guild member.</p>
+            </div>
+            <div class="rule-item">
+              <span class="rule-index">02</span>
+              <p>Do not kill other guild members.</p>
+            </div>
+            <div class="rule-item">
+              <span class="rule-index">03</span>
+              <p>Do not betray guild members.</p>
+            </div>
+            <div class="rule-item">
+              <span class="rule-index">04</span>
+              <p>Do not intentionally cause problems within the guild.</p>
+            </div>
+            <div class="rule-item">
+              <span class="rule-index">05</span>
+              <p>Represent EME positively.</p>
+            </div>
+            <div class="rule-item">
+              <span class="rule-index">06</span>
+              <p>Help other guild members when possible.</p>
+            </div>
+            <div class="rule-item">
+              <span class="rule-index">07</span>
+              <p>Support guild members during conflicts.</p>
+            </div>
+            <div class="rule-item">
+              <span class="rule-index">08</span>
+              <p>Share important information with the guild.</p>
+            </div>
+            <div class="rule-item">
+              <span class="rule-index">09</span>
+              <p>Participate in guild activities.</p>
+            </div>
+            <div class="rule-item">
+              <span class="rule-index">10</span>
+              <p>Do not leave a guild member behind when they need help.</p>
+            </div>
+            <div class="rule-item">
+              <span class="rule-index">11</span>
+              <p>Do not share private information accessible only to members of our guild.</p>
+            </div>
+            <div class="rule-item">
+              <span class="rule-index">12</span>
+              <p>Follow reasonable decisions made by guild leadership.</p>
+            </div>
+            <div class="rule-item">
+              <span class="rule-index">13</span>
+              <p>Follow the HylexMC server rules!</p>
+            </div>
           </div>
         </div>
 
-        <div class="card rule-card reveal">
-          <span class="rt-index">03</span>
-          <div>
-            <h3>Other</h3>
-            <p>Do not share private information accessible only to members of our guild.<br>
-              Follow reasonable decisions made by guild leadership.<br>
-              Follow the HylexMC server rules!
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="rules-footer reveal">
-        <p>Read the full HylexMC server rules for details that apply server-wide.</p>
-        <a href="https://hylexmc.net/rules" target="_blank" rel="noopener" class="btn btn-ghost">View HylexMC Rules</a>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-brand">
-      <span class="brand-mark"></span>
-      EME GUILD
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../assets/images/eme-logo.png" alt="EME Guild logo" width="34" height="34" />
+        <div>
+          <strong>EME GUILD</strong>
+          <p>Building a powerful community on HylexMC.</p>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>NAVIGATION</h4>
+          <a href="/">Home</a>
+          <a href="/members/">Members</a>
+          <a href="/alliances/">Alliances</a>
+          <a href="/rules/">Rules</a>
+        </div>
+        <div class="footer-col">
+          <h4>COMMUNITY</h4>
+          <a href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener noreferrer">Discord</a>
+        </div>
+        <div class="footer-col">
+          <h4>SERVER</h4>
+          <span>HylexMC</span>
+        </div>
+      </div>
     </div>
-    <ul class="footer-links">
-      <li><a href="../#about">About</a></li>
-      <li><a href="../members">Members</a></li>
-      <li><a href="../allies">Allies</a></li>
-      <li><a href="../rules/">Rules</a></li>
-      <li><a href="../faq">FAQ</a></li>
-      <li><a href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener">Discord</a></li>
-    </ul>
-  </div>
-  <div class="wrap">
-    <p class="footer-note">EME Guild is an independent player community on HylexMC and is not affiliated with Mojang.</p>
+    <div class="footer-bottom">
+      <span>© 2026 EME Guild. All rights reserved. | EME Guild is an independent player community on HylexMC and is not affiliated with Mojang.</span>
+      <a href="/rules/">Rules</a>
+    </div>
   </div>
 </footer>
 
+<script src="../js/particles.js"></script>
+<script src="../js/animations.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>
