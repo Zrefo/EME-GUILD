@@ -1,258 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-root="./">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>EME Guild — HylexMC</title>
-<link rel="icon" type="image/png" href="assets/images/eme-logo.png">
-<meta name="description" content="EME Guild is a community of players on HylexMC focused on bringing people together, creating new friendships and building a unique guild experience." />
+<title>EME Guild — HylexMC Community</title>
+<meta name="description" content="EME is a Minecraft guild on HylexMC focused on building a powerful and independent community." />
+<meta name="theme-color" content="#060907" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta property="og:title" content="EME Guild — HylexMC Community" />
+<meta property="og:description" content="EME is a Minecraft guild on HylexMC focused on building a powerful and independent community." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://eme-guild.xyz/" />
+<meta property="og:image" content="https://eme-guild.xyz/assets/images/eme-logo.png" />
+
+<link rel="icon" href="assets/images/eme-logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="assets/images/eme-logo.png" />
 
 <link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/components.css" />
 <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
 
-<div class="bg-gradient"></div>
-<div class="bg-grid"></div>
-<canvas id="particle-canvas" aria-hidden="true"></canvas>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-<nav class="nav" id="site-nav">
-  <div class="wrap">
-    <a href="#home" class="brand">
-      <span class="brand-mark"></span>
-      EME GUILD
+<div id="loader" aria-hidden="true">
+  <div class="loader-mark">
+    <img src="assets/images/eme-logo.png" alt="" />
+    <div class="loader-ring"></div>
+  </div>
+  <div class="loader-bar"><span></span></div>
+  <p class="loader-label">LOADING EME</p>
+</div>
+
+<div id="page-transition" aria-hidden="true"></div>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-vignette" aria-hidden="true"></div>
+<div class="bg-noise" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/">
+      <img src="assets/images/eme-logo.png" alt="EME Guild logo" width="32" height="32" />
+      <span>EME</span>
     </a>
-
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="members/">Members</a></li>
-      <li><a href="allies/">Allies</a></li>
-      <li><a href="rules/">Rules</a></li>
-      <li><a href="/faq/">FAQ</a></li>
-      <li><a href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener" class="nav-cta">Discord</a></li>
-    </ul>
-
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/" class="is-active">Home</a>
+      <a href="/members/">Members</a>
+      <a href="/alliances/">Alliances</a>
+      <a href="/rules/">Rules</a>
+      <a href="https://discord.gg/AXxr3UpthV" class="nav-cta" target="_blank" rel="noopener noreferrer">Discord</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
   </div>
-</nav>
+</header>
 
-<main>
+<div class="mobile-menu" aria-hidden="true">
+  <a href="/" class="is-active">Home</a>
+  <a href="/members/">Members</a>
+  <a href="/alliances/">Alliances</a>
+  <a href="/rules/">Rules</a>
+  <a href="https://discord.gg/AXxr3UpthV" class="nav-cta" target="_blank" rel="noopener noreferrer">Join Discord</a>
+</div>
 
-  <section class="hero" id="home">
-    <span class="hero-eyebrow"><span class="dot"></span>HYLEXMC OFFICIAL GUILD</span>
-    <h1>EME <span class="accent">GUILD</span></h1>
-    <p class="hero-subtitle">A community built by players, for players.</p>
-    <p class="hero-desc">
-      EME Guild is a community of players on HylexMC focused on bringing people together,
-      creating new friendships and building a unique guild experience.
-    </p>
+<main id="main-content">
 
-    <div class="hero-actions">
-      <a href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener" class="btn btn-primary">Join our Discord</a>
-      <a href="#members" class="btn btn-ghost">Meet the Guild</a>
-    </div>
-
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="num" data-stat="memberCount">—</span>
-        <span class="lbl">Members</span>
-      </div>
-      <div class="hero-stat">
-        <span class="num" data-stat="allyCount">—</span>
-        <span class="lbl">Allies</span>
-      </div>
-      <div class="hero-stat">
-        <span class="num">HylexMC</span>
-        <span class="lbl">Server</span>
+  <section class="hero">
+    <div class="hero-inner">
+      <img class="hero-mark" src="assets/images/eme-logo.png" alt="EME Guild logo" width="72" height="72" />
+      <p class="hero-eyebrow">HylexMC · Independent Guild</p>
+      <h1 class="hero-title">EME <span>GUILD</span></h1>
+      <p class="hero-subtitle">Building a powerful community on HylexMC.</p>
+      <p class="hero-desc">EME is a Minecraft guild built around community, teamwork and creating an independent place for players on HylexMC.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener noreferrer">Join our Discord</a>
+        <a class="btn btn-ghost btn-lg" href="/members/">Meet the guild</a>
       </div>
     </div>
-
-    <span class="scroll-cue" aria-hidden="true"></span>
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="hero-scroll-track"><div class="hero-scroll-dot"></div></div>
+    </div>
   </section>
 
   <section class="section" id="about">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="section-tag">// ABOUT</span>
-        <h2>About EME Guild</h2>
-        <p>Who we are, and what we're building on HylexMC.</p>
-      </div>
-
+    <div class="container">
       <div class="about-grid">
-        <div class="card about-main reveal">
-          <p>
-            EME Guild is a growing HylexMC community created for players who want to be part of
-            something more than just a guild. We aim to bring together players from different
-            game modes, create a welcoming environment and build a strong community where
-            everyone can find their place.
+        <div data-reveal>
+          <p class="section-kicker">About Eme</p>
+          <h2 class="section-title">Founded on HylexMC, run as a real community</h2>
+          <p class="section-desc">
+            EME is a guild created on HylexMC with the goal of bringing players together and
+            building an independent community of its own. EME is not only an in-game guild —
+            it's an organized network of members, alliances and shared systems.
           </p>
         </div>
-
-        <div class="card about-goal reveal">
-          <h3>Our Goal</h3>
-          <p>The goal of the EME Guild is to unite players and create a distinct community of its own on HylexMC.</p>
+        <div class="about-features" data-reveal-group>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <h4>Active Discord community</h4>
+              <p>A large, active server where members organize and stay connected daily.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div>
+              <h4>Custom Discord bot</h4>
+              <p>A purpose-built bot that keeps the guild's systems running smoothly.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div>
+              <h4>Guild members &amp; alliances</h4>
+              <p>A growing roster of players and allied guilds standing together on HylexMC.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg>
+            </div>
+            <div>
+              <h4>Community activities</h4>
+              <p>Custom systems and events that keep the guild engaged beyond the game.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="wrap"><div class="xp-divider" aria-hidden="true"></div></div>
-
-  <section class="section" id="info">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="section-tag">// GUILD INFO</span>
-        <h2>Guild Information</h2>
-        <p>What it takes to join, ally with us, and how we play.</p>
-      </div>
-
-      <div class="info-grid reveal-group">
-        <div class="card info-card reveal">
-          <div class="icon">01</div>
-          <h3>Joining Requirements</h3>
-          <p>The requirements aren't strict — we welcome anyone who has linked their Discord account to the HylexMC server and has spent at least three days playing on the server.</p>
+  <section class="stats-band">
+    <div class="container">
+      <div class="stats-grid" data-reveal>
+        <div class="stat-cell">
+          <span class="stat-value" data-stat="memberCount" data-fallback-text="—">0</span>
+          <span class="stat-label">MEMBERS</span>
         </div>
-
-        <div class="card info-card reveal">
-          <div class="icon">02</div>
-          <h3>Alliance Requirements</h3>
-          <p>We require a minimum of 5 members in your guild before we'll consider an alliance.</p>
+        <div class="stat-cell">
+          <span class="stat-value" data-stat="allyCount" data-fallback-text="—">0</span>
+          <span class="stat-label">ALLIANCES</span>
         </div>
-
-        <div class="card info-card reveal">
-          <div class="icon">03</div>
-          <h3>Main Game Mode</h3>
-          <p>We don't have a default game mode. Players from every game mode are welcome here.</p>
-        </div>
-
-        <div class="card discord-card reveal">
-          <div class="left">
-            <div class="discord-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.369a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.099.246.198.373.292a.077.077 0 0 1-.006.127c-.598.35-1.22.645-1.873.892a.076.076 0 0 0-.04.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.029 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.055c.5-5.177-.838-9.674-3.548-13.66a.061.061 0 0 0-.031-.028ZM8.02 15.331c-1.183 0-2.157-1.086-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.332-.955 2.418-2.157 2.418Zm7.975 0c-1.183 0-2.157-1.086-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.211 0 2.176 1.096 2.157 2.42 0 1.332-.946 2.418-2.157 2.418Z"/></svg>
-            </div>
-            <div>
-              <h3>Discord</h3>
-              <p>Join the official EME Guild Discord server and become part of our community.</p>
-            </div>
-          </div>
-          <a href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener" class="btn btn-primary">Join Discord</a>
+        <div class="stat-cell">
+          <span class="stat-value mono" style="font-size: clamp(16px,2.2vw,22px);">HylexMC</span>
+          <span class="stat-label">SERVER</span>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section" id="owner">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="section-tag">// LEADERSHIP</span>
-        <h2>Guild Owner</h2>
-        <p>The player behind EME Guild.</p>
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <p class="section-kicker" style="justify-content:center;">Leadership</p>
+        <h2 class="section-title">Guild Owner</h2>
+        <p class="section-desc" style="margin-left:auto;margin-right:auto;">The player behind EME Guild.</p>
       </div>
-
-      <div class="card owner-panel reveal">
-        <div class="owner-avatar-frame">
-          <div class="ring" aria-hidden="true"></div>
-          <img src="https://mc-heads.net/avatar/Zrefo/168" alt="Zrefo's Minecraft avatar" loading="lazy" width="168" height="168" />
-        </div>
+      <a
+        class="owner-card"
+        href="https://hylexmc.net/players/Zrefo"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-reveal
+        data-reveal-delay="100"
+      >
+        <img
+          class="owner-avatar"
+          src="https://mc-heads.net/avatar/Zrefo/168"
+          alt="Zrefo's Minecraft avatar"
+          width="96" height="96"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='assets/images/eme-logo.png';"
+        />
         <div class="owner-info">
-          <span class="role-badge">GUILD OWNER</span>
+          <span class="owner-tag">GUILD OWNER</span>
           <h3>Zrefo</h3>
           <p>Founder and owner of EME Guild, responsible for the guild's direction and its community on HylexMC.</p>
+          <span class="entity-link">View HylexMC profile ↗</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section" id="goal">
+    <div class="container">
+      <div class="goal-panel" data-reveal>
+        <p class="goal-kicker">Our Goal</p>
+        <p class="goal-text">The goal of the EME Guild is to unite players and create a distinct community of its own on HylexMC.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="join">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <p class="section-kicker" style="justify-content:center;">Join Eme</p>
+        <h2 class="section-title">Two requirements. That's it.</h2>
+      </div>
+      <div class="req-grid" data-reveal-group>
+        <div class="req-card">
+          <span class="req-num">01</span>
+          <h3>Linked account</h3>
+          <p>Your Minecraft account must be linked to Discord on HylexMC.</p>
+        </div>
+        <div class="req-card">
+          <span class="req-num">02</span>
+          <h3>3 days of playtime</h3>
+          <p>You must have at least 3 days of playtime on the server.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="wrap"><div class="xp-divider" aria-hidden="true"></div></div>
-
-  <section class="section" id="members">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="section-tag">// ROSTER</span>
-        <h2>Guild Members</h2>
-        <p>Every player currently part of EME Guild.</p>
+  <section class="section" id="how-to-join">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <p class="section-kicker" style="justify-content:center;">How To Join</p>
+        <h2 class="section-title">Read the guild rules and requirements, join our Discord server, and then open a ticket.</h2>
       </div>
-
-      <div class="count-banner reveal">
-        <span class="count-num" data-stat="memberCount">—</span>
-        <span class="count-label">Members</span>
+      <div class="steps" data-reveal-group>
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h3>Read the rules and requirements</h3>
+          <p>Review the guild and Discord rules so you know what to expect.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3>Join the EME Discord</h3>
+          <p>Head over to our Discord server and introduce yourself.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3>Open a ticket</h3>
+          <p>Open a ticket in Discord and a member of leadership will help you.</p>
+        </div>
       </div>
-
-      <div class="card stat-panel reveal">
-        <span class="stat-panel-num" data-stat="memberCount">—</span>
-        <span class="stat-panel-label">Members</span>
-        <p>Every player currently part of EME Guild.</p>
-        <a href="members/" class="btn btn-primary">View member list</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="allies">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="section-tag">// DIPLOMACY</span>
-        <h2>Guild Allies</h2>
-        <p>Guilds standing alongside EME Guild on HylexMC.</p>
-      </div>
-
-      <div class="card stat-panel reveal">
-        <span class="stat-panel-num" data-stat="allyCount">—</span>
-        <span class="stat-panel-label">Allies</span>
-        <p>Guilds currently allied with EME Guild.</p>
-        <a href="allies/" class="btn btn-primary">View ally list</a>
+      <div class="join-cta" data-reveal>
+        <a class="btn btn-primary btn-lg" href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener noreferrer">Join EME Discord</a>
       </div>
     </div>
   </section>
 
-  <div class="wrap"><div class="xp-divider" aria-hidden="true"></div></div>
-
-  <section class="section" id="rules">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="section-tag">// CODE OF CONDUCT</span>
-        <h2>Guild Rules</h2>
-        <p>The few rules every member is expected to follow.</p>
-      </div>
-
-      <div class="card stat-panel reveal">
-        <span class="stat-panel-label">EME RULES</span>
-        <p>All rules applicable to members of the EME guild.</p>
-        <a href="rules/" class="btn btn-primary">Read the rules</a>
+  <section class="section" id="cta">
+    <div class="container">
+      <div class="cta-band" data-reveal>
+        <h2>Ready to build something with us?</h2>
+        <p>EME is growing every week. Come see who's already here and what we're building on HylexMC.</p>
+        <div class="hero-actions" style="margin-top:0;">
+          <a class="btn btn-primary" href="/members/">Meet the guild</a>
+          <a class="btn btn-ghost" href="/rules/">Read the rules</a>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-brand">
-      <span class="brand-mark"></span>
-      EME GUILD
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/images/eme-logo.png" alt="EME Guild logo" width="34" height="34" />
+        <div>
+          <strong>EME GUILD</strong>
+          <p>Building a powerful community on HylexMC.</p>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>NAVIGATION</h4>
+          <a href="/">Home</a>
+          <a href="/members/">Members</a>
+          <a href="/alliances/">Alliances</a>
+          <a href="/rules/">Rules</a>
+        </div>
+        <div class="footer-col">
+          <h4>COMMUNITY</h4>
+          <a href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener noreferrer">Discord</a>
+        </div>
+        <div class="footer-col">
+          <h4>SERVER</h4>
+          <span>HylexMC</span>
+        </div>
+      </div>
     </div>
-    <ul class="footer-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="members/">Members</a></li>
-      <li><a href="allies/">Allies</a></li>
-      <li><a href="rules/">Rules</a></li>
-      <li><a href="/faq/">FAQ</a></li>
-      <li><a href="https://discord.gg/AXxr3UpthV" target="_blank" rel="noopener">Discord</a></li>
-    </ul>
-  </div>
-  <div class="wrap">
-    <p class="footer-note">EME Guild is an independent player community on HylexMC and is not affiliated with Mojang.</p>
+    <div class="footer-bottom">
+      <span>© 2026 EME Guild. All rights reserved. | EME Guild is an independent player community on HylexMC and is not affiliated with Mojang.</span>
+      <a href="/rules/">Rules</a>
+    </div>
   </div>
 </footer>
 
+<script src="js/particles.js"></script>
+<script src="js/animations.js"></script>
 <script src="js/main.js"></script>
-<script src="js/stats.js"></script>
 </body>
 </html>
