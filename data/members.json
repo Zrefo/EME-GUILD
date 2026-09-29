@@ -1,13 +1,46 @@
 [
-    "Zrefo",
-    "DQKK",
-    "TheHonouredOne",
-    "gogotedbeshara",
-    "BMR",
-    "Silex_X",
-    "OPSteve",
-    "shoaibkhaaannn",
-    "qwertyu7",
-    "hsfiobg",
-    "martinSv12"
+  {
+    "name": "Zrefo",
+    "role": "Founder"
+  },
+  {
+    "name": "DQKK",
+    "role": "Mod"
+  },
+  {
+    "name": "TheHonouredOne",
+    "role": "Mod"
+  },
+  {
+    "name": "gogotedbeshara",
+    "role": "Member"
+  },
+  {
+    "name": "BMR",
+    "role": "Member"
+  },
+  {
+    "name": "Silex_X",
+    "role": "Member"
+  },
+  {
+    "name": "OPSteve",
+    "role": "Member"
+  },
+  {
+    "name": "shoaibkhaaannn",
+    "role": "Mod"
+  },
+  {
+    "name": "qwertyu7",
+    "role": "Member"
+  },
+  {
+    "name": "hsfiobg",
+    "role": "Member"
+  },
+  {
+    "name": "martinSv12",
+    "role": "Member"
+  }
 ]
