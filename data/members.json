@@ -1,46 +1,50 @@
 [
-  {
-    "name": "Zrefo",
-    "role": "Founder"
-  },
-  {
-    "name": "DQKK",
-    "role": "Mod"
-  },
-  {
-    "name": "TheHonouredOne",
-    "role": "Mod"
-  },
-  {
-    "name": "gogotedbeshara",
-    "role": "Member"
-  },
-  {
-    "name": "BMR",
-    "role": "Member"
-  },
-  {
-    "name": "Silex_X",
-    "role": "Member"
-  },
-  {
-    "name": "OPSteve",
-    "role": "Member"
-  },
-  {
-    "name": "shoaibkhaaannn",
-    "role": "Mod"
-  },
-  {
-    "name": "qwertyu7",
-    "role": "Member"
-  },
-  {
-    "name": "hsfiobg",
-    "role": "Member"
-  },
-  {
-    "name": "martinSv12",
-    "role": "Member"
-  }
+    {
+        "name": "Zrefo",
+        "role": "Founder"
+    },
+    {
+        "name": "DQKK",
+        "role": "Mod"
+    },
+    {
+        "name": "TheHonouredOne",
+        "role": "Mod"
+    },
+    {
+        "name": "gogotedbeshara",
+        "role": "Member"
+    },
+    {
+        "name": "BMR",
+        "role": "Member"
+    },
+    {
+        "name": "Silex_X",
+        "role": "Member"
+    },
+    {
+        "name": "OPSteve",
+        "role": "Member"
+    },
+    {
+        "name": "shoaibkhaaannn",
+        "role": "Mod"
+    },
+    {
+        "name": "qwertyu7",
+        "role": "Member"
+    },
+    {
+        "name": "hsfiobg",
+        "role": "Member"
+    },
+    {
+        "name": "martinSv12",
+        "role": "Member"
+    },
+    {
+        "name": "EME_CHAT",
+        "role": "Member"
+    }
 ]
