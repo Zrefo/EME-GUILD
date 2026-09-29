@@ -1,10 +1,26 @@
 [
-    "TIGER",
-    "FBI",
-    "EXCTE",
-    "EVYLS",
-    "L4WS",
-    "SMTH",
-    "DRACO",
-    "NOVA"
+    {
+        "name": "TIGER"
+    },
+    {
+        "name": "FBI"
+    },
+    {
+        "name": "EXCTE"
+    },  
+    {
+        "name": "EVYLS"
+    },
+    {
+        "name": "L4WS"
+    },
+    {
+        "name": "SMTH"
+    },
+    {
+        "name": "DRACO"
+    },
+    {
+        "name": "NOVA"
+    }
 ]
