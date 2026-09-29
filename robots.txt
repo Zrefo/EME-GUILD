@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://eme-guild.xyz/sitemap.xml
