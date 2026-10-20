@@ -1529,3 +1529,109 @@ body { isolation: isolate; }
 @media (max-width: 767px) { .requirements-grid { grid-template-columns: 1fr; } .application-guide { padding: 28px; } .ambient-particle:nth-child(n+7) { display: none; } }
 @media (max-width: 575px) { .requirement-card, .application-guide { padding: 25px 22px; } .application-guide .button { width: 100%; } .footer-bottom { padding-bottom: 70px; } }
 @media (prefers-reduced-motion: reduce) { .ambient-particle { display: none; } .feature-card:hover .icon-box svg, .requirement-card:hover { transform: none; } }
+
+/* Community refresh: glass panels, membership profiles and exclusive badges. */
+:root { --panel-shine: linear-gradient(135deg, #ffffff06, #ffffff00 55%); }
+.header { box-shadow: 0 8px 32px #00000020; }
+.button { border-radius: 9px; box-shadow: inset 0 1px 0 #ffffff1a; }
+.button:active { transform: translateY(0) scale(.98); }
+.feature-card, .requirement-card, .member-row, .ally-row { background-image: var(--panel-shine); box-shadow: 0 12px 35px #00000012; }
+.member-row:hover, .ally-row:hover { transform: translateY(-2px); box-shadow: 0 10px 25px #00000030; }
+.member-row, .ally-row { transition: border-color .25s, background-color .25s, transform .25s, box-shadow .25s; }
+.member-info .role-helper { color: #87d8ff; }
+.member-info .member-since { font-size: .75rem; color: var(--muted); }
+.rules-content { display: grid; gap: 56px; }
+.rules-category { padding: 36px; border: 1px solid #31433a; border-radius: 18px; background: linear-gradient(135deg,#14211aaa,#0d1011f5 55%); box-shadow: 0 20px 70px #00000020; }
+.rules-category .category-chip { display: inline-flex; padding: 6px 12px; margin-bottom: 28px; border: 1px solid #3ddd8740; background: #3ddd870a; color: var(--accent); font-size: .7rem; letter-spacing: .13em; border-radius: 6px; }
+.rules-category .rule-block:last-child { border-bottom: 0; padding-bottom: 0; }
+#guild-rules.rules-category { padding: 36px; border-color: #344353; background: linear-gradient(135deg,#18212d99,#0d1011f5 55%); }
+.guild-category .category-chip { color: #aad5ff; border-color: #aad5ff40; background: #aad5ff08; }
+.guild-category>.eyebrow { color: #aad5ff; }
+.rules-sidebar a[href='#guild-rules'] { color: #aad5ff; }
+.profile-page { padding-top: 40px; padding-bottom: 80px; }
+.profile-back { margin-bottom: 26px; }
+.profile-hero { border: 1px solid #33493c; border-radius: 18px; overflow: hidden; background: #0d1011d9; }
+.profile-cover { height: 120px; position: relative; overflow: hidden; background: radial-gradient(ellipse at 30% 100%,#3ddd8725,transparent 65%), repeating-linear-gradient(90deg,#3ddd8709 0 1px,transparent 1px 48px), repeating-linear-gradient(0deg,#3ddd8709 0 1px,transparent 1px 48px); border-bottom: 1px solid #293c31; }
+.profile-cover::after { content: ''; position: absolute; inset: -100% -50%; background: linear-gradient(110deg,transparent 40%,#3ddd8712 50%,transparent 60%); animation: profile-sweep 14s ease-in-out infinite; }
+.profile-identity { display: flex; align-items: center; gap: 28px; padding: 0 36px 36px; position: relative; margin-top: -35px; flex-wrap: wrap; }
+#profile-avatar { width: 144px; height: 144px; border-radius: 18px; border: 8px solid #0d1011; background: #15251b; image-rendering: pixelated; box-shadow: 0 12px 30px #0004; }
+.profile-identity>div { padding-top: 44px; min-width: 0; flex: 1; }
+.profile-identity h1 { font-size: clamp(2rem,4vw,3.5rem); overflow-wrap: anywhere; }
+.profile-identity .eyebrow { margin-bottom: 10px; }
+#profile-role { margin-top: 10px; }
+.hylex-button { margin-top: 44px; gap: 10px; }
+.hylex-button img { object-fit: contain; }
+#profile-status { min-height: 24px; margin-top: 16px; font-size: .875rem; }
+.profile-stats { display: grid; grid-template-columns: repeat(3,1fr); border: 1px solid var(--line); border-radius: 12px; background: #0d1011cc; margin: 8px 0 24px; padding: 24px 0; }
+.profile-stats>div { padding: 0 28px; display: flex; flex-direction: column; gap: 8px; }
+.profile-stats>div+div { border-left: 1px solid var(--line); }
+.profile-stats span { font-size: .8rem; color: var(--muted); }
+.profile-stats strong { font-size: 1.25rem; color: var(--accent); font-weight: 600; }
+.profile-columns { display: grid; grid-template-columns: 1.3fr 1fr; gap: 24px; }
+.profile-panel { border: 1px solid var(--line); border-radius: 16px; padding: 32px; background: linear-gradient(135deg,#ffffff04,transparent),#0d1011df; }
+.profile-panel h2 { font-size: 1.65rem; margin-bottom: 16px; }
+.profile-panel>p:not(.eyebrow) { font-size: .9rem; }
+.profile-panel .eyebrow { font-size: .65rem; }
+.badge-collection { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.exclusive-badge { --badge-color: #3ddd87; display: inline-flex; align-items: center; gap: 10px; position: relative; overflow: hidden; padding: 11px 14px; border-radius: 8px; border: 1px solid color-mix(in srgb,var(--badge-color) 40%,transparent); background: color-mix(in srgb,var(--badge-color) 7%,#0d1011); flex-shrink: 0; transition: transform .25s,box-shadow .25s; }
+.exclusive-badge:hover { transform: translateY(-3px); box-shadow: 0 6px 25px color-mix(in srgb,var(--badge-color) 12%,transparent); }
+.badge-logo { display: block; width: 24px; height: 24px; background: var(--badge-color); mask: url('/assets/images/eme-logo.png') center/contain no-repeat; -webkit-mask: url('/assets/images/eme-logo.png') center/contain no-repeat; }
+.badge-label { font-size: .75rem; font-weight: 750; letter-spacing: .07em; color: var(--badge-color); background: linear-gradient(110deg,var(--badge-color) 30%,#f5fffa 48%,var(--badge-color) 65%); background-size: 250% 100%; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: badge-shimmer 5s ease-in-out infinite; }
+.badge-locked { opacity: .45; filter: grayscale(1); }
+.badge-locked .badge-label { animation: none; background: none; -webkit-text-fill-color: currentColor; }
+.next-milestone { background: radial-gradient(ellipse at 100% 0,#3ddd8712,transparent 70%),#0d1011df; }
+#milestone-progress { appearance: none; border: 0; width: 100%; height: 8px; border-radius: 10px; margin-top: 28px; overflow: hidden; background: #233027; accent-color: var(--accent); }
+#milestone-progress::-webkit-progress-bar { background: #233027; border-radius: 10px; }
+#milestone-progress::-webkit-progress-value { background: var(--accent); border-radius: 10px; transition: width 1s; }
+#milestone-progress::-moz-progress-bar { background: var(--accent); }
+.journey-panel { margin-top: 24px; }
+.milestone-list { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; list-style: none; padding: 0; margin: 28px 0 0; }
+.milestone-list li { border: 1px solid var(--line); padding: 20px; border-radius: 12px; display: flex; align-items: flex-start; flex-direction: column; gap: 16px; }
+.milestone-list li>span { font-size: .75rem; color: var(--muted); }
+.milestone-list .milestone-earned { border-color: #3ddd8733; }
+.motion-paused .badge-label, .motion-paused .profile-cover::after { animation-play-state: paused!important; }
+@keyframes badge-shimmer { 0%,15% { background-position: 120% 0; } 65%,100% { background-position: -120% 0; } }
+@keyframes profile-sweep { 0%,20% { transform: translateX(-30%); } 80%,100% { transform: translateX(30%); } }
+@media(max-width:991px) { .profile-columns { grid-template-columns: 1fr; } .milestone-list { grid-template-columns: repeat(2,1fr); } .rules-category,#guild-rules.rules-category { padding: 28px; } .profile-identity { gap: 20px; } .hylex-button { margin-top: 10px; } }
+@media(max-width:575px) { .profile-identity { padding: 0 22px 26px; gap: 16px; } #profile-avatar { width: 100px; height: 100px; border-width: 5px; } .profile-identity>div { padding-top: 40px; } .profile-identity .eyebrow { font-size: .55rem; } .hylex-button { width: 100%; } .profile-stats { grid-template-columns: 1fr; padding: 0; } .profile-stats>div { padding: 18px 22px; } .profile-stats>div+div { border-left: 0; border-top: 1px solid var(--line); } .profile-panel { padding: 24px 20px; } .milestone-list { grid-template-columns: 1fr; } .milestone-list li { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 16px; } .rules-category,#guild-rules.rules-category { padding: 24px 20px; } .rules-content { gap: 40px; } }
+@media(prefers-reduced-motion:reduce) { .badge-label { animation: none; background: none; -webkit-text-fill-color: currentColor; } .exclusive-badge:hover,.member-row:hover,.ally-row:hover { transform: none; } }
+.exclusive-badge:not(.badge-in-view) .badge-label { animation-play-state: paused; }
+.badge-logo { mask-mode: luminance; }
+@media(prefers-reduced-motion:reduce) { #milestone-progress::-webkit-progress-value { transition: none; } }
+.catalog-link { margin-top: 26px; }
+.profile-stats.community-stats { grid-template-columns: 1fr; }
+.profile-stats.community-stats>div { border: 0; }
+.profile-columns:has(.next-milestone[hidden]) { grid-template-columns: 1fr; }
+.badge-catalog { padding-bottom: 90px; }
+.catalog-nav { display: flex; flex-wrap: wrap; gap: 10px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.catalog-nav a { padding: 9px 16px; border: 1px solid #334a3d; background: #3ddd8707; border-radius: 8px; font-size: .875rem; transition: background .2s,border-color .2s; }
+.catalog-nav a:hover { background: #3ddd8715; border-color: var(--accent); }
+#catalog-status { margin-top: 20px; font-size: .875rem; }
+.catalog-section { margin-top: 64px; scroll-margin-top: 110px; }
+.catalog-section h2 { margin-bottom: 18px; }
+.catalog-section>p:not(.eyebrow) { max-width: 700px; }
+.catalog-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin-top: 30px; }
+.catalog-card { padding: 26px; border: 1px solid var(--line); border-radius: 14px; background: linear-gradient(135deg,#ffffff04,transparent),#0d1011; }
+.catalog-card h3 { font-size: 1rem; margin-block: 22px 12px; }
+.catalog-card p { font-size: .875rem; }
+@media(max-width:991px) { .header nav { gap: 10px; } .header nav>a:not(.button) { font-size: .75rem; } .catalog-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:767px) { .header nav>a:not(.button) { font-size: 1rem; } }
+@media(max-width:575px) { .catalog-grid { grid-template-columns: 1fr; } .catalog-card { padding: 24px; } }
+.profile-lookup { padding-top: 40px; }
+.profile-lookup form { max-width: 650px; }
+.profile-lookup label { display: block; font-size: .875rem; color: var(--muted); margin-bottom: 10px; }
+.lookup-controls { display: flex; gap: 12px; }
+.lookup-controls input { flex: 1; min-width: 0; background: var(--surface); color: var(--text); border: 1px solid #354139; border-radius: 8px; padding: 12px 16px; font: inherit; }
+#lookup-status { margin-top: 14px; }
+.lookup-directory-link { margin-bottom: 24px; }
+@media(max-width:575px) { .lookup-controls { flex-direction: column; } }
+/* Additional profile tools; existing site styles preserved. */
+.eme-profile-search{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;padding:30px;border:1px solid var(--line);border-radius:14px;background:var(--surface);margin-top:15px;margin-bottom:30px}.eme-profile-search h2{font-size:1.7rem;margin-bottom:8px}.eme-profile-search .eyebrow{margin-bottom:10px}.eme-profile-search p:last-child{font-size:.85rem}.home-player-form label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:10px}.home-player-form input{min-width:0}.guild-page{padding-block:40px 80px;min-height:65vh}.guild-hero{display:flex;align-items:center;gap:30px;padding:36px;border:1px solid var(--line);border-radius:16px;background:var(--surface);margin:28px 0}.guild-hero>div:last-child{min-width:0}.guild-hero h1{font-size:clamp(2rem,5vw,3.5rem);overflow-wrap:anywhere}.guild-emblem{display:grid;place-items:center;flex-shrink:0;width:120px;height:120px;border:1px solid #3ddd8740;border-radius:16px;background:#3ddd8710;color:var(--accent);font-size:3rem;overflow:hidden}.guild-emblem img{width:100%;height:100%;object-fit:contain}#guild-status{font-size:.85rem;margin-top:12px}.guild-information{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px}.guild-information p{white-space:pre-wrap;overflow-wrap:anywhere}.guild-information h2{font-size:1.6rem}
+@media(max-width:767px){.eme-profile-search{grid-template-columns:1fr;padding:24px;gap:22px}.guild-hero{padding:25px;flex-direction:column;align-items:flex-start}.guild-emblem{width:90px;height:90px}.guild-information{grid-template-columns:1fr}.eme-profile-search .lookup-controls{flex-wrap:wrap}.eme-profile-search input{flex-basis:180px}.eme-profile-search button{flex-grow:1}}
+
+/* Uploaded guild logos fill their frame without stretching their proportions. */
+.guild-emblem img,.ally-emblem img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center}
+.ally-emblem{overflow:hidden;flex-shrink:0}
+.badge-custom-logo{mask:none!important;-webkit-mask:none!important;background:transparent!important;flex-shrink:0;overflow:hidden;border-radius:4px}
+.badge-custom-logo img{display:block;width:100%;height:100%;object-fit:cover}
+.exclusive-badge{max-width:100%}.badge-label{overflow-wrap:anywhere;min-width:0}.badge-logo{flex-shrink:0}
