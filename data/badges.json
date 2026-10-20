@@ -1,0 +1,111 @@
+{
+  "tenure": [
+    {
+      "id": "tenure-1",
+      "label": "7 DAYS +",
+      "title": "EME Member Since 7 days +",
+      "days": 7,
+      "color": "#3ddd87"
+    },
+    {
+      "id": "tenure-2",
+      "label": "14 DAYS +",
+      "title": "EME Member Since 14 days +",
+      "days": 14,
+      "color": "#3ddd87"
+    },
+    {
+      "id": "tenure-3",
+      "label": "30 DAYS +",
+      "title": "EME Member Since 30 days +",
+      "days": 30,
+      "color": "#3ddd87"
+    },
+    {
+      "id": "tenure-4",
+      "label": "3 MONTHS +",
+      "title": "EME Member Since 3 months +",
+      "months": 3,
+      "color": "#3ddd87"
+    },
+    {
+      "id": "tenure-5",
+      "label": "6 MONTHS +",
+      "title": "EME Member Since 6 months +",
+      "months": 6,
+      "color": "#3ddd87"
+    },
+    {
+      "id": "tenure-6",
+      "label": "1 YEAR +",
+      "title": "EME Member Since 1 year +",
+      "years": 1,
+      "color": "#3ddd87"
+    },
+    {
+      "id": "tenure-7",
+      "label": "2 YEARS +",
+      "title": "EME Member Since 2 years +",
+      "years": 2,
+      "color": "#3ddd87"
+    }
+  ],
+  "roles": {
+    "helper": {
+      "id": "helper",
+      "label": "EME HELPER",
+      "title": "EME HELPER",
+      "color": "#87d8ff"
+    },
+    "mod": {
+      "id": "mod",
+      "label": "EME MOD",
+      "title": "EME MOD",
+      "color": "#ff4c4c"
+    },
+    "founder": {
+      "id": "founder",
+      "label": "EME FOUNDER",
+      "title": "EME FOUNDER",
+      "color": "#ecd610"
+    }
+  },
+  "special": {
+    "creative_steve": {
+      "id": "creative_steve",
+      "label": "CREATIVE STEVE",
+      "title": "CREATIVE STEVE",
+      "color": "#7eddd5"
+    },
+    "champion": {
+      "id": "champion",
+      "label": "CHAMPION",
+      "title": "CHAMPION",
+      "color": "#ffbc66"
+    },
+    "guild_heart": {
+      "id": "guild_heart",
+      "label": "GUILD HEART",
+      "title": "GUILD HEART",
+      "color": "#ff8fb8"
+    },
+    "special": {
+      "id": "special",
+      "label": "SPECIAL",
+      "title": "SPECIAL",
+      "color": "#d6b3ff"
+    },
+    "ally": {
+      "id": "ally",
+      "label": "ALLY",
+      "title": "EME ALLY",
+      "color": "#b18aff"
+    },
+    "emerald": {
+      "id": "emerald",
+      "label": "EMERALD",
+      "title": "EMERALD",
+      "color": "#00ff4c"
+    }
+  }
+}
