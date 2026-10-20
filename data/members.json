@@ -1,66 +1,82 @@
 [
-    {
-        "name": "Zrefo",
-        "role": "Founder"
-    },
-    {
-        "name": "DQKK",
-        "role": "Mod"
-    },
-    {
-        "name": "TheHonouredOne",
-        "role": "Mod"
-    },
-    {
-        "name": "gogotedbeshara",
-        "role": "Member"
-    },
-    {
-        "name": "BMR",
-        "role": "Member"
-    },
-    {
-        "name": "Silex_X",
-        "role": "Member"
-    },
-    {
-        "name": "OPSteve",
-        "role": "Member"
-    },
-    {
-        "name": "shoaibkhaaannn",
-        "role": "Mod"
-    },
-    {
-        "name": "qwertyu7",
-        "role": "Member"
-    },
-    {
-        "name": "martinSv12",
-        "role": "Member"
-    },
-    {
-        "name": "mohamadali90k3",
-        "role": "Member"
-    },
-    {
-        "name": "VanguAa",
-        "role": "Helper"
-    },
-    {
-        "name": "Tofu",
-        "role": "Member"
-    },
-    {
-        "name": "ISMAIL0605",
-        "role": "Member"
-    },
-    {
-        "name": "_divine_123",
-        "role": "Member"
-    },
-    {
-        "name": "ItzMewzy_",
-        "role": "Member"
-    }
+  {
+    "name": "Zrefo",
+    "role": "Founder",
+    "joined": "2026-09-02"
+  },
+  {
+    "name": "DQKK",
+    "role": "Founder",
+    "joined": "2026-09-02"
+  },
+  {
+    "name": "TheHonouredOne",
+    "role": "Mod",
+    "joined": "2026-09-02"
+  },
+  {
+    "name": "gogotedbeshara",
+    "role": "Member",
+    "joined": "2026-09-08"
+  },
+  {
+    "name": "BMR",
+    "role": "Member",
+    "joined": "2026-09-08"
+  },
+  {
+    "name": "Silex_X",
+    "role": "Member",
+    "joined": "2026-09-09"
+  },
+  {
+    "name": "OPSteve",
+    "role": "Member",
+    "joined": "2026-09-09"
+  },
+  {
+    "name": "shoaibkhaaannn",
+    "role": "Mod",
+    "joined": "2026-09-11"
+  },
+  {
+    "name": "qwertyu7",
+    "role": "Member",
+    "joined": "2026-09-13"
+  },
+  {
+    "name": "martinSv12",
+    "role": "Member",
+    "joined": "2026-09-27"
+  },
+  {
+    "name": "mohamadali90k3",
+    "role": "Member",
+    "joined": "2026-10-02"
+  },
+  {
+    "name": "VanguAa",
+    "role": "Member",
+    "joined": "2026-10-03"
+  },
+  {
+    "name": "Tofu",
+    "role": "Member",
+    "joined": "2026-10-09"
+  },
+  {
+    "name": "ISMAIL0605",
+    "role": "Member",
+    "joined": "2026-10-15"
+  },
+  {
+    "name": "_divine_123",
+    "role": "Member",
+    "joined": "2026-10-18"
+  },
+  {
+    "name": "ItzMewzy_",
+    "role": "Member",
+    "joined": "2026-10-20"
+  }
 ]
