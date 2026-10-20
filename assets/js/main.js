@@ -39,7 +39,27 @@
     });
     document.querySelectorAll('.hero-art, .community-visual, .final-cta').forEach(el => motionObserver.observe(el));
   }
-  document.querySelectorAll('.page-heading, .requirement-card, .application-guide').forEach(el => el.classList.add('reveal'));
+  document.querySelectorAll('.page-heading, .requirement-card, .application-guide, .profile-panel').forEach(el => el.classList.add('reveal'));
+  // Pause decorative badge motion outside the viewport, including dynamically loaded badges.
+  if ('IntersectionObserver' in window) {
+    const badgeObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.target.classList.toggle('badge-in-view', entry.isIntersecting));
+    });
+    const observeBadges = node => {
+      if (!(node instanceof Element)) return;
+      if (node.matches('.exclusive-badge')) badgeObserver.observe(node);
+      node.querySelectorAll('.exclusive-badge').forEach(el => badgeObserver.observe(el));
+    };
+    new MutationObserver(records => records.forEach(record => {
+      record.addedNodes.forEach(observeBadges);
+      record.removedNodes.forEach(node => {
+        if (node instanceof Element) {
+          if (node.matches('.exclusive-badge')) badgeObserver.unobserve(node);
+          node.querySelectorAll('.exclusive-badge').forEach(el => badgeObserver.unobserve(el));
+        }
+      });
+    })).observe(document.getElementById('main'), { childList: true, subtree: true });
+  }
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.getElementById('navigation');
   toggle.hidden = false;
@@ -91,7 +111,7 @@
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 8000);
     try {
-      const response = await fetch(url, { signal: controller.signal, credentials: 'omit' });
+      const response = await fetch(window.EMEDataURL(url), { cache: 'no-store', signal: controller.signal, credentials: 'omit' });
       if (!response.ok) throw new Error('Data unavailable');
       return await response.json();
     } finally { clearTimeout(timeout); }

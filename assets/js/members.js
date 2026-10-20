@@ -25,14 +25,21 @@
         const role = document.createElement('p');
         role.textContent = member.role;
         const roleKey = member.role.trim().toLowerCase();
-        if (['founder', 'mod', 'member'].includes(roleKey)) role.classList.add(`role-${roleKey}`);
+        if (['founder', 'mod', 'member', 'helper'].includes(roleKey)) role.classList.add(`role-${roleKey}`);
         info.append(role);
+      }
+      if (member.joined && /^\d{4}-\d{2}-\d{2}$/.test(member.joined)) {
+        const joined = new Date(member.joined + 'T00:00:00Z');
+        if (Number.isFinite(+joined) && joined <= new Date() && joined.toISOString().slice(0,10) === member.joined) {
+          const since = document.createElement('p'); since.className = 'member-since';
+          since.textContent = 'Member since ' + new Intl.DateTimeFormat('en', {month:'short', day:'numeric', year:'numeric', timeZone:'UTC'}).format(joined);
+          info.append(since);
+        }
       }
       const link = document.createElement('a');
       link.className = 'button button-ghost'; link.textContent = 'View Profile';
-      link.href = `https://hylexmc.net/players/${encodeURIComponent(member.name)}`;
-      link.target = '_blank'; link.rel = 'noopener noreferrer';
-      link.setAttribute('aria-label', `View ${member.name}'s profile on HylexMC`);
+      link.href = `/profile/?name=${encodeURIComponent(member.name)}`;
+      link.setAttribute('aria-label', `View ${member.name}'s EME profile`);
       row.append(avatar, info, link); fragment.append(row);
     });
     list.append(fragment);
