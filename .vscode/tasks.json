@@ -1,0 +1,57 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "EME: preview server",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "-u",
+        "scripts/preview.py",
+        "--port",
+        "8080"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "eme-preview",
+        "pattern": {
+          "regexp": "^(?!)()()$",
+          "file": 1,
+          "message": 2
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^EME preview starting",
+          "endsPattern": "^EME preview ready:"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "runOptions": {
+        "instanceLimit": 1
+      }
+    },
+    {
+      "label": "EME: open website preview",
+      "type": "process",
+      "command": "python",
+      "args": [
+        "-m",
+        "webbrowser",
+        "http://127.0.0.1:8080"
+      ],
+      "dependsOn": "EME: preview server",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
